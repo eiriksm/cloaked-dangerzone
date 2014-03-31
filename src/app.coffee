@@ -6,12 +6,12 @@ app.cache = {}
 util = require 'util'
 index = require './routes/index'
 
-app.init = (port = 8080) ->
+app.init = (ip = '127.0.0.1', port = 8080) ->
   # Look at me, writing coffee script. Looks sketchy though.
 
   # Eh. Really? You can chain functions like this? This is unreadable!
   console.log util.format 'App started. Listening on %d', port
-  app.listen port
+  app.listen port, ip
 
 # OK, that's kind of readable. Literate.
 app.use app.router
