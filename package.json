@@ -19,7 +19,7 @@
   "devDependencies": {
     "coffee-script": "*",
     "should": "^3.2.0",
-    "mocha": "^1.18.2",
+    "mocha": "*",
     "istanbul": "^0.2.7",
     "supertest": "^0.10.0"
   },
