@@ -1,8 +1,7 @@
-import 'dart:html';
 import 'package:angular/angular.dart';
 
-import 'dart:mirrors';
 @MirrorsUsed(override: '*')
+import 'dart:mirrors';
 
 @NgController(
     selector: '[booking-ctrl]',
