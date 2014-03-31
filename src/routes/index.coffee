@@ -16,8 +16,6 @@ if settings && settings.users
   settings.users.forEach (v) ->
     users[v.username] = v
 
-
-console.log settings.users
 module.exports =
   user: (req, res) ->
     user = req.params.user
