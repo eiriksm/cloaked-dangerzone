@@ -7,18 +7,24 @@ import 'dart:mirrors';
     selector: '[booking-ctrl]',
     publishAs: 'ctrl')
 class BookingController {
-  String selectedBooker;
+  List availableUsers = new List();
   List bookingData = new List();
   Http _http;
   Map<String, bool> categoryFilterMap = {};
   bool loading = false;
   
   BookingController(this._http) {
-    // Constructor. Empty for now.
+    // Get all available users.
+    _http.get('/api/user')
+    .then((HttpResponse response) {
+      response.data.forEach((v) {
+        availableUsers.add(v);
+      });
+    });
   }
-  void loadBooking() {
+  void loadBooking(String user) {
     loading = false;
-    _http.get('/api/user/' + selectedBooker)
+    _http.get('/api/userstatus/' + user)
     .then((HttpResponse response) {
       response.data.forEach((k, v) {
         if (k == 'status') {

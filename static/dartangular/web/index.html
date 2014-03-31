@@ -9,7 +9,9 @@
   <body>
     <h1>Cloaked danger-zone</h1>
     <div booking-ctrl>
-      <label for="name-to-check">Check booking for name</label><input type="text" id="name-to-check" ng-change="ctrl.loadBooking()" ng-model="ctrl.selectedBooker"/>
+      <div ng-repeat="user in ctrl.availableUsers">
+        <button ng-click="ctrl.loadBooking(user)">{{user}}</button>
+      </div>
       <div ng-repeat="data in ctrl.bookingData">
         <span>{{data[0]}}</span>
         <span>{{data[1]}},</span>
