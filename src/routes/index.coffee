@@ -22,8 +22,10 @@ module.exports =
     if !users[user]
       res.send 404
       return
-    if app.cache[user]?.updated?.getTime() < (new Date().getTime() + 60000)
-      res.send app.cache[user]
+    if app.cache[user]
+      c = app.cache[user].updated
+      if c && c.getTime() < (new Date().getTime() + 60000)
+        res.send app.cache[user]
       return
     octo.init users[user], false, (err, _) ->
       octo.status (err, result) ->
