@@ -24,7 +24,7 @@ module.exports =
       return
     if app.cache[user]
       c = app.cache[user].updated
-      if c && c.getTime() < (new Date().getTime() + 60000)
+      if c && c.getTime() > (new Date().getTime() + 60000)
         res.send app.cache[user]
       return
     octo.init users[user], false, (err, _) ->
