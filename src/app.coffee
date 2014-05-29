@@ -16,6 +16,7 @@ app.init = (ip = '127.0.0.1', port = 8080) ->
 # OK, that's kind of readable. Literate.
 app.use app.router
 app.use express.compress()
+
 app.use express.static __dirname + '/../static/dartangular/web'
 app.use express.static __dirname + '/../static/dartangular/build/web'
 
