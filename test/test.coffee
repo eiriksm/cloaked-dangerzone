@@ -54,3 +54,9 @@ describe 'App', ->
     .end (err, a) ->
       a.statusCode.should.equal 404
       done(err)
+
+  it 'Should happen something if we init all over again', (done) ->
+    process.env.CLOAKED_USERS = '[{"username":"testname@test.com","password":"bogus" BLARGH = ]]}]'
+    app.close()
+    app.init(12321, 45654)
+    done()

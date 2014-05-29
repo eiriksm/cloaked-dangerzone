@@ -10,9 +10,8 @@ import 'dart:mirrors';
     publishAs: 'ctrl')
 class BookingController {
   List availableUsers = new List();
-  List bookingData = new List();
+  Map bookingData = new Map();
   Http _http;
-  Map<String, bool> categoryFilterMap = {};
   bool loading = false;
   String base = '/';
   String title = 'Cloaked danger-zone'; 
@@ -43,8 +42,9 @@ class BookingController {
       loading = false;
       response.data.forEach((k, v) {
         if (k == 'status') {
+          bookingData[user] = new List();
           v.forEach((f) {
-            bookingData.add(f);
+            bookingData[user].add(f);
           });
         }
       });

@@ -50,11 +50,17 @@
         return done(err);
       });
     });
-    return it('Should give us 404 on non existing user', function(done) {
+    it('Should give us 404 on non existing user', function(done) {
       return request(app).get('/api/userstatus/bogus' + Math.random()).end(function(err, a) {
         a.statusCode.should.equal(404);
         return done(err);
       });
+    });
+    return it('Should happen something if we init all over again', function(done) {
+      process.env.CLOAKED_USERS = '[{"username":"testname@test.com","password":"bogus" BLARGH = ]]}]';
+      app.close();
+      app.init(12321, 45654);
+      return done();
     });
   });
 

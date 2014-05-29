@@ -6,15 +6,25 @@ module.exports = app
 app.cache = {}
 util = require 'util'
 index = require './routes/index'
+server = {}
 
 app.init = (ip = '127.0.0.1', port = 8080) ->
   # Look at me, writing coffee script. Looks sketchy though.
 
   # Eh. Really? You can chain functions like this? This is unreadable!
   console.log util.format 'App started. Listening on %d', port
-  app.listen port, ip
+  app.opts = {
+    ip: ip,
+    port: port
+  }
+  server = app.listen port, ip
 
 # OK, that's kind of readable. Literate.
+app.close = () ->
+  console.log 'Closing server with the following options:', app.opts
+  server.close()
+
+
 app.use compress()
 app.use express.static __dirname + '/../static/dartangular/web'
 app.use express.static __dirname + '/../static/dartangular/build/web'
