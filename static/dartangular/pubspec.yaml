@@ -1,5 +1,11 @@
 name: dartangular
 description: A sample web application
 dependencies:
-  browser: any
   angular: any
+  browser: any
+  unittest: any
+  web_components: any
+  shadow_dom: any
+
+transformers:
+- angular

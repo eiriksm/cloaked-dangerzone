@@ -1,21 +1,45 @@
 <!DOCTYPE html>
 
-<html ng-app>
+<html ng-app booking-ctrl>
   <head>
     <meta charset="utf-8">
-    <title>Dartangular</title>
+    <title>{{ctrl.title}}</title>
     <link rel="stylesheet" href="dartangular.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   </head>
   <body>
-    <h1>Cloaked danger-zone</h1>
-    <div booking-ctrl>
+    <div>
+      <h1>{{ctrl.title}}</h1>
       <div ng-repeat="user in ctrl.availableUsers">
-        <button ng-click="ctrl.loadBooking(user)">{{user}}</button>
-      </div>
-      <div ng-repeat="data in ctrl.bookingData">
-        <span>{{data[0]}}</span>
-        <span>{{data[1]}},</span>
-        <span>{{data[2]}}</span>
+        <a class="book-click" ng-click="ctrl.loadBooking(user)"><i class="fa fa-cube"></i> {{user}}</a>
+        <div ng-show="ctrl.loading" class="loader">
+          <div id="spinningSquaresG">
+            <div id="spinningSquaresG_1" class="spinningSquaresG">
+            </div>
+            <div id="spinningSquaresG_2" class="spinningSquaresG">
+            </div>
+            <div id="spinningSquaresG_3" class="spinningSquaresG">
+            </div>
+            <div id="spinningSquaresG_4" class="spinningSquaresG">
+            </div>
+            <div id="spinningSquaresG_5" class="spinningSquaresG">
+            </div>
+            <div id="spinningSquaresG_6" class="spinningSquaresG">
+            </div>
+            <div id="spinningSquaresG_7" class="spinningSquaresG">
+            </div>
+            <div id="spinningSquaresG_8" class="spinningSquaresG">
+            </div>
+          </div>
+        </div>
+        <ul>
+          <li ng-repeat="data in ctrl.bookingData">
+            <span>{{data[0]}}</span>
+            <span>{{data[1]}},</span>
+            <span>{{data[2]}}</span>
+          </li>
+        </ul>
       </div>
     </div>
 

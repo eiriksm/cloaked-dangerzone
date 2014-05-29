@@ -1,9 +1,11 @@
+import 'dart:html';
 import 'package:angular/angular.dart';
+import 'package:angular/application_factory.dart';
 
-@MirrorsUsed(override: '*')
+@MirrorsUsed(symbols: 'dartangular', override: '*')
 import 'dart:mirrors';
 
-@NgController(
+@Controller(
     selector: '[booking-ctrl]',
     publishAs: 'ctrl')
 class BookingController {
@@ -12,20 +14,33 @@ class BookingController {
   Http _http;
   Map<String, bool> categoryFilterMap = {};
   bool loading = false;
+  String base = '/';
+  String title = 'Cloaked danger-zone'; 
   
   BookingController(this._http) {
+    // So we can do requests on localhost as well.
+    
+    // @todo: This should probably be proxied through something in dart.
+    if (window.location.origin == 'http://127.0.0.1:3030') {
+      base = 'http://localhost:8080/';
+    }
+    // Turn on loading animation.
+    loading = true;
     // Get all available users.
-    _http.get('/api/user')
+    _http.get(base + 'api/user')
     .then((HttpResponse response) {
+      // Turn off loading animation.
+      loading = false;
       response.data.forEach((v) {
         availableUsers.add(v);
       });
     });
   }
   void loadBooking(String user) {
-    loading = false;
-    _http.get('/api/userstatus/' + user)
+    loading = true;
+    _http.get(base + 'api/userstatus/' + user)
     .then((HttpResponse response) {
+      loading = false;
       response.data.forEach((k, v) {
         if (k == 'status') {
           v.forEach((f) {
@@ -33,17 +48,12 @@ class BookingController {
           });
         }
       });
-      loading = true;
     });
-    loading = true;
-  }
-}
-class MyAppModule extends Module {
-  MyAppModule() {
-    type(BookingController);
   }
 }
 
 void main() {
-  ngBootstrap(module: new MyAppModule());
+  applicationFactory()
+    .addModule(new Module()..bind(BookingController))
+    .run();
 }

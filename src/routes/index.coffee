@@ -18,7 +18,9 @@ if settings && settings.users
 
 module.exports =
   user: (req, res) ->
+    res.header 'Access-Control-Allow-Origin', '*'
     user = req.params.user
+    console.log 'looging for ' + user
     if !users[user]
       res.send 404
       return
@@ -26,9 +28,11 @@ module.exports =
       c = app.cache[user].updated
       if c && c.getTime() > (new Date().getTime() + 60000)
         res.send app.cache[user]
-      return
+        return
     octo.init users[user], false, (err, _) ->
+      console.log _
       octo.status (err, result) ->
+        console.log result
         if !err
           data = {
             status: result,
@@ -40,6 +44,7 @@ module.exports =
         res.send 500, 'problems'
 
   allusers: (req, res) ->
+    res.header 'Access-Control-Allow-Origin', '*'
     response = []
     settings.users.forEach (n) ->
       response.push n.username
