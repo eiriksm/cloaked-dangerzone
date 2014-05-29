@@ -7,7 +7,6 @@ settings = config.readConfig('./config.yml');
 if !settings.users
   # Try to find some users in env variables.
   if process.env.CLOAKED_USERS
-    console.log 'Trying environment variables for users'
     try
       settings.users = JSON.parse process.env.CLOAKED_USERS
     catch error
@@ -18,9 +17,7 @@ if settings && settings.users
 
 module.exports =
   user: (req, res) ->
-    res.header 'Access-Control-Allow-Origin', '*'
     user = req.params.user
-    console.log 'looging for ' + user
     if !users[user]
       res.send 404
       return
@@ -30,9 +27,7 @@ module.exports =
         res.send app.cache[user]
         return
     octo.init users[user], false, (err, _) ->
-      console.log _
       octo.status (err, result) ->
-        console.log result
         if !err
           data = {
             status: result,
@@ -44,7 +39,6 @@ module.exports =
         res.send 500, 'problems'
 
   allusers: (req, res) ->
-    res.header 'Access-Control-Allow-Origin', '*'
     response = []
     settings.users.forEach (n) ->
       response.push n.username
