@@ -10,6 +10,7 @@ if !settings.users
     try
       settings.users = JSON.parse process.env.CLOAKED_USERS
     catch error
+      console.error error
 
 if settings && settings.users
   settings.users.forEach (v) ->
@@ -22,8 +23,8 @@ module.exports =
       res.send 404
       return
     if app.cache[user]
-      c = app.cache[user].updated
-      if c && c.getTime() > (new Date().getTime() + 60000)
+      c = app.cache[user].unix
+      if c && c > (Date.now() - 60000)
         res.send app.cache[user]
         return
     octo.init users[user], false, (err, _) ->
@@ -31,9 +32,12 @@ module.exports =
         if !err
           data = {
             status: result,
-            updated: new Date()
+            updated: new Date(),
+            unix: Date.now()
           }
           app.cache[user] = data
+          console.log app.cache[user]
+          console.log 'yeah'
           res.send data
           return
         res.send 500, 'problems'

@@ -2,20 +2,57 @@
 (function() {
   var app, request, should;
 
+  process.env.CLOAKED_USERS = '[{"username":"testname@test.com","password":"bogus"}]';
+
   request = require('supertest');
 
   should = require('should');
 
   app = require('../lib/app');
 
+  app.init();
+
   describe('App', function() {
+    var upd;
     it('Should do something', function(done) {
       app.should.be["instanceof"](Function);
       app.init.should.be["instanceof"](Function);
       return done();
     });
-    return it('Should answer on GET /', function(done) {
-      return request(app).get('/').end(function(err) {
+    it('Should answer on GET /', function(done) {
+      return request(app).get('/').end(function(err, a) {
+        a.statusCode.should.equal(200);
+        return done(err);
+      });
+    });
+    it('Should give us something on GET /api/user', function(done) {
+      return request(app).get('/api/user').end(function(err, a, b) {
+        a.statusCode.should.equal(200);
+        a.body[0].should.equal('testname@test.com');
+        return done(err);
+      });
+    });
+    upd = new Date();
+    it('Should give us something on GET /api/userstatus/<user>', function(done) {
+      this.timeout(10000);
+      return request(app).get('/api/userstatus/testname@test.com').end(function(err, a, b) {
+        a.statusCode.should.equal(200);
+        a.body.status.length.should.equal(0);
+        upd = a.body.updated;
+        return done(err);
+      });
+    });
+    it('Should give us the same something on GET /api/userstatus/<user>', function(done) {
+      return request(app).get('/api/userstatus/testname@test.com').end(function(err, a, b) {
+        a.statusCode.should.equal(200);
+        a.body.status.length.should.equal(0);
+        a.body.updated.should.equal(upd);
+        return done(err);
+      });
+    });
+    return it('Should give us 404 on non existing user', function(done) {
+      return request(app).get('/api/userstatus/bogus' + Math.random()).end(function(err, a) {
+        a.statusCode.should.equal(404);
         return done(err);
       });
     });

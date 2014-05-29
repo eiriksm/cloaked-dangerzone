@@ -2,10 +2,12 @@ compile:
 		./node_modules/.bin/coffee --compile --output lib/ src/
 
 test-cov:
-	echo "awesome"
+		./node_modules/.bin/coffee --compile --output test/ test/
+		node ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha
+		- cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js > /dev/null 2>&1
 
 test:
 		./node_modules/.bin/coffee --compile --output test/ test/
 		./node_modules/mocha/bin/mocha
 
-.PHONY: compile test
+.PHONY: compile test test-cov
