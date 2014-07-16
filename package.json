@@ -19,16 +19,16 @@
   "homepage": "https://github.com/eiriksm/cloaked-dangerzone",
   "devDependencies": {
     "coffee-script": "~1.7.1",
-    "coveralls": "~2.10.0",
-    "istanbul": "~0.2.11",
+    "coveralls": "~2.11.1",
+    "istanbul": "~0.3.0",
     "mocha": "~1.20.1",
     "should": "~4.0.4",
     "supertest": "~0.13.0"
   },
   "dependencies": {
-    "compression": "~1.0.7",
-    "express": "~4.4.3",
-    "tripping-octo-nemesis": "0.0.4",
+    "compression": "~1.0.8",
+    "express": "~4.6.1",
+    "tripping-octo-nemesis": "0.0.5",
     "yaml-config": "~0.3.0"
   }
 }
