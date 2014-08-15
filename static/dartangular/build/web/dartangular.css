@@ -9,6 +9,19 @@
 
 body {
   font-family: Arial, sans-serif;
+  font-size: 2em;
+  text-align: center;
+}
+.book-click {
+  background: #1BBC9B;
+  box-shadow: 3px 3px 0px #2D3E50;
+  color: #fff;
+  padding: 10px;
+  display: block;
+}
+.book-click:active {
+  box-shadow: none;
+  margin: 3px 0 0 3px;
 }
 
 #spinningSquaresG {

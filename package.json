@@ -28,7 +28,7 @@
   "dependencies": {
     "compression": "~1.0.8",
     "express": "~4.6.1",
-    "tripping-octo-nemesis": "0.0.5",
+    "tripping-octo-nemesis": "~0.1.0",
     "yaml-config": "~0.3.0"
   }
 }

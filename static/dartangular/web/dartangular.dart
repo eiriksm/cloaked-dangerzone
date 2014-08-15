@@ -50,6 +50,14 @@ class BookingController {
       });
     });
   }
+  void unbook(String id, String user) {
+    loading = true;
+    _http.get(base + 'api/unbook/' + user + '/' + id)
+    .then((HttpResponse response) {
+      loading = false;
+      loadBooking(user);
+    });
+  }
 }
 
 void main() {

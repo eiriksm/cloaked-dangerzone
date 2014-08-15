@@ -32,6 +32,7 @@ app.use express.static __dirname + '/../static/dartangular/build/web'
 # These guys also looks kind of OK.
 app.get '/api/userstatus/:user', index.user
 app.get '/api/user', index.allusers
+app.get '/api/unbook/:user/:id', index.unbook
 app.get '/', index.index
 
 # By the way, I like this form of commenting :)

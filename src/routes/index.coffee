@@ -60,6 +60,16 @@ module.exports =
       response.push n.username
     res.json(response)
 
+  unbook: (req, res) ->
+    user = req.params.user
+    id = req.params.id
+    octo = require 'tripping-octo-nemesis'
+    octo.init users[user], false, (err, _) ->
+      octo.unbook id, (e, r) ->
+        # This means we need to invalidate the cache.
+        delete app.cache[user]
+        res.json(r)
+
   # Index.html sent back on GET /
 
   index: (req, res) ->
