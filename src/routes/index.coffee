@@ -22,8 +22,6 @@ if !settings.users
       console.error error
 
 if settings && settings.users
-  console.log 'is here'
-  console.log settings
   settings.users.forEach (v) ->
     users[v.username] = v
 

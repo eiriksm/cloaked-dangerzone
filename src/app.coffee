@@ -26,8 +26,12 @@ app.close = () ->
 
 
 app.use compress()
-app.use express.static __dirname + '/../static/dartangular/web'
-app.use express.static __dirname + '/../static/dartangular/build/web'
+app.use express.static __dirname + '/../static/dartangular/web', {
+  maxAge: 3600000 * 24 * 30
+}
+app.use express.static __dirname + '/../static/dartangular/build/web', {
+  maxAge: 3600000 * 24 * 30
+}
 
 # These guys also looks kind of OK.
 app.get '/api/userstatus/:user', index.user
