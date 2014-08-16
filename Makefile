@@ -1,3 +1,6 @@
+dart-compile:
+	dart2js --out=static/dartangular/build/web/dartangular.dart.js static/dartangular/web/dartangular.dart -m
+
 compile:
 		./node_modules/.bin/coffee --compile --output lib/ src/
 

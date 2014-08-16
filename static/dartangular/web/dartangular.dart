@@ -1,4 +1,3 @@
-import 'dart:html';
 import 'package:angular/angular.dart';
 import 'package:angular/application_factory.dart';
 
@@ -17,12 +16,6 @@ class BookingController {
   String title = 'Cloaked danger-zone'; 
   
   BookingController(this._http) {
-    // So we can do requests on localhost as well.
-    
-    // @todo: This should probably be proxied through something in dart.
-    if (window.location.origin == 'http://127.0.0.1:3030') {
-      base = 'http://localhost:8080/';
-    }
     // Turn on loading animation.
     loading = true;
     // Get all available users.
