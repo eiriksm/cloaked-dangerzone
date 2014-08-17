@@ -1,8 +1,31 @@
 # Holy moly. no "var" keywords and no semicolons. That itches a little.
 express = require 'express'
 compress = require 'compression'
+auth = require 'http-auth'
+octo = require 'tripping-octo-nemesis'
+
 app = express()
+
+app.users = {}
 module.exports = app
+
+basic = auth.basic {
+  realm: '3t login'
+}, (username, password, callback) ->
+  if !app.users[username]
+    octo.init {username: username, password: password}, false, (err, _) ->
+      if !err
+        callback true
+        app.users[username] = {
+          password: password,
+          username: username
+        }
+        return
+      callback false
+      return
+    return
+  callback app.users[username] && app.users[username].password.toString() == password.toString()
+app.use auth.connect basic
 app.cache = {}
 util = require 'util'
 index = require './routes/index'

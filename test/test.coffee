@@ -1,5 +1,4 @@
 # Mock the env variable
-process.env.CLOAKED_USERS = '[{"username":"testname@test.com","password":"bogus"}]'
 
 request = require 'supertest'
 should = require 'should'
@@ -15,6 +14,7 @@ describe 'App', ->
   it 'Should answer on GET /', (done) ->
     request(app)
     .get '/'
+    .set('Authorization', 'Basic dGVzdG5hbWVAdGVzdC5jb206Ym9ndXM=')
     .end (err, a) ->
       a.statusCode.should.equal 200
       done(err)
@@ -22,6 +22,7 @@ describe 'App', ->
   it 'Should give us something on GET /api/user', (done) ->
     request app
     .get '/api/user'
+    .set('Authorization', 'Basic dGVzdG5hbWVAdGVzdC5jb206Ym9ndXM=')
     .end (err, a, b) ->
       a.statusCode.should.equal 200
       a.body[0].should.equal 'testname@test.com'
@@ -33,6 +34,7 @@ describe 'App', ->
     this.timeout 10000
     request app
     .get '/api/userstatus/testname@test.com'
+    .set('Authorization', 'Basic dGVzdG5hbWVAdGVzdC5jb206Ym9ndXM=')
     .end (err, a, b) ->
       a.statusCode.should.equal 200
       a.body.status.length.should.equal 0
@@ -42,6 +44,7 @@ describe 'App', ->
   it 'Should give us the same something on GET /api/userstatus/<user>', (done) ->
     request app
     .get '/api/userstatus/testname@test.com'
+    .set('Authorization', 'Basic dGVzdG5hbWVAdGVzdC5jb206Ym9ndXM=')
     .end (err, a, b) ->
       a.statusCode.should.equal 200
       a.body.status.length.should.equal 0
@@ -51,6 +54,7 @@ describe 'App', ->
   it 'Should give us 404 on non existing user', (done) ->
     request app
     .get '/api/userstatus/bogus' + Math.random()
+    .set('Authorization', 'Basic dGVzdG5hbWVAdGVzdC5jb206Ym9ndXM=')
     .end (err, a) ->
       a.statusCode.should.equal 404
       done(err)

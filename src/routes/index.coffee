@@ -1,34 +1,13 @@
-config = require 'yaml-config'
 app = require '../app'
-fs = require 'fs'
 users = {}
-config_file = './config.yml'
+_ = require 'underscore'
 
-settings = config.readConfig(config_file, 'default');
-if !settings.users
-  # Try to find some users in env variables.
-  if process.env.CLOAKED_USERS
-    try
-      settings.users = JSON.parse process.env.CLOAKED_USERS
-      # We probably do not have the config file. Try to create it.
-      fs.open config_file, 'w', (err, fd) ->
-        if !err
-          # First write the "default" key to the file
-          fs.appendFile config_file, 'default:\n', (e) ->
-            if !e
-              config.updateConfig settings, config_file, 'default'
-        # Should do some error handling, I guess. At least we tried, eh?
-    catch error
-      console.error error
-
-if settings && settings.users
-  settings.users.forEach (v) ->
-    users[v.username] = v
+settings = app.settings
 
 module.exports =
   user: (req, res) ->
     user = req.params.user
-    if !users[user]
+    if !app.users[user]
       res.send 404
       return
     if app.cache[user]
@@ -38,7 +17,7 @@ module.exports =
         return
     # We need to init this per request.
     octo = require 'tripping-octo-nemesis'
-    octo.init users[user], false, (err, _) ->
+    octo.init app.users[user], false, (err, _) ->
       octo.status (err, result) ->
         if !err
           data = {
@@ -52,11 +31,10 @@ module.exports =
         res.send 500, 'problems'
 
   allusers: (req, res) ->
-    response = []
-    settings.users = settings.users || []
-    settings.users.forEach (n) ->
-      response.push n.username
-    res.json(response)
+    if app.users[req.user]
+      res.send [req.user]
+    else
+      res.send 404
 
   unbook: (req, res) ->
     user = req.params.user
