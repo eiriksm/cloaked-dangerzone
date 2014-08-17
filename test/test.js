@@ -10,6 +10,12 @@
 
   app.init();
 
+  app.setOcto({
+    init: function(a, b, callback) {
+      return callback();
+    }
+  });
+
   describe('App', function() {
     var upd;
     it('Should do something', function(done) {

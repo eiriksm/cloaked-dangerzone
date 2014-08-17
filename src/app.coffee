@@ -7,6 +7,7 @@ octo = require 'tripping-octo-nemesis'
 app = express()
 
 app.users = {}
+
 module.exports = app
 
 basic = auth.basic {
@@ -41,6 +42,9 @@ app.init = (ip = '127.0.0.1', port = 8080) ->
     port: port
   }
   server = app.listen port, ip
+
+app.setOcto = (newOcto) ->
+  octo = newOcto
 
 # OK, that's kind of readable. Literate.
 app.close = () ->

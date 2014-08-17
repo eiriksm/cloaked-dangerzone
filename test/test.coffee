@@ -4,6 +4,10 @@ request = require 'supertest'
 should = require 'should'
 app = require '../lib/app'
 app.init()
+app.setOcto {
+  init: (a, b, callback) ->
+    callback()
+}
 
 describe 'App', ->
   it 'Should do something', (done) ->
