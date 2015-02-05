@@ -3,9 +3,12 @@ description: A sample web application
 dependencies:
   angular: any
   browser: any
-  unittest: any
   web_components: any
   shadow_dom: any
 
 transformers:
-- angular
+- angular:
+    html_files:
+      - web/book-ctrl.html
+- $dart2js: 
+    {'minify':true}

@@ -4,18 +4,19 @@ import 'package:angular/application_factory.dart';
 @MirrorsUsed(symbols: 'dartangular', override: '*')
 import 'dart:mirrors';
 
-@Controller(
-    selector: '[booking-ctrl]',
-    publishAs: 'ctrl')
-class BookingController {
-  List availableUsers = new List();
+@Component(
+  selector: 'booking-ctrl',
+  templateUrl: 'book-ctrl.html')
+class BookingComponent {
+  List<Map> availableUsers = new List();
   Map bookingData = new Map();
-  Http _http;
+  final Http _http;
   bool loading = false;
   String base = '/';
-  String title = 'Cloaked danger-zone'; 
+  String title = 'Cloaked danger-zone';
   
-  BookingController(this._http) {
+  BookingComponent(this._http) {
+    print("doing this init stuff.");
     // Turn on loading animation.
     loading = true;
     // Get all available users.
@@ -53,8 +54,14 @@ class BookingController {
   }
 }
 
+class BookingModule extends Module {
+  BookingModule() {
+    bind(BookingComponent);
+  }
+}
+
 void main() {
   applicationFactory()
-    .addModule(new Module()..bind(BookingController))
+    .addModule(new BookingModule())
     .run();
 }

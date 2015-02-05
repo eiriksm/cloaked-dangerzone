@@ -10,38 +10,8 @@
   </head>
   <body>
     <div>
-      <h1>{{ctrl.title}}</h1>
-      <div ng-repeat="user in ctrl.availableUsers">
-        <a class="book-click" ng-click="ctrl.loadBooking(user)"><i class="fa fa-cube"></i> {{user}}</a>
-        <div ng-show="ctrl.loading" class="loader">
-          <div id="spinningSquaresG">
-            <div id="spinningSquaresG_1" class="spinningSquaresG">
-            </div>
-            <div id="spinningSquaresG_2" class="spinningSquaresG">
-            </div>
-            <div id="spinningSquaresG_3" class="spinningSquaresG">
-            </div>
-            <div id="spinningSquaresG_4" class="spinningSquaresG">
-            </div>
-            <div id="spinningSquaresG_5" class="spinningSquaresG">
-            </div>
-            <div id="spinningSquaresG_6" class="spinningSquaresG">
-            </div>
-            <div id="spinningSquaresG_7" class="spinningSquaresG">
-            </div>
-            <div id="spinningSquaresG_8" class="spinningSquaresG">
-            </div>
-          </div>
-        </div>
-        <ul>
-          <li ng-repeat="data in ctrl.bookingData[user]">
-            <span>{{data[0]}}</span>
-            <span>{{data[1]}},</span>
-            <span>{{data[2]}}</span>
-            <a href="javascript:;" ng-click="ctrl.unbook(data[3], user)"><i class="fa fa-magic"></i> unbook</a>
-          </li>
-        </ul>
-      </div>
+      <h1>Cloaked</h1>
+      <booking-ctrl></booking-ctrl>
     </div>
 
     <script src="packages/shadow_dom/shadow_dom.min.js"></script>

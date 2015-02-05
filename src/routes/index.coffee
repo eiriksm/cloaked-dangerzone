@@ -8,7 +8,7 @@ module.exports =
   user: (req, res) ->
     user = req.params.user
     if !app.users[user]
-      res.send 404
+      res.sendStatus 404
       return
     if app.cache[user]
       c = app.cache[user].unix
@@ -28,13 +28,13 @@ module.exports =
           app.cache[user] = data
           res.send data
           return
-        res.send 500, 'problems'
+        res.sendStatus 500, 'problems'
 
   allusers: (req, res) ->
     if app.users[req.user]
       res.send [req.user]
     else
-      res.send 404
+      res.sendStatus 404
 
   unbook: (req, res) ->
     user = req.params.user

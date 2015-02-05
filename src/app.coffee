@@ -3,8 +3,10 @@ express = require 'express'
 compress = require 'compression'
 auth = require 'http-auth'
 octo = require 'tripping-octo-nemesis'
+cors = require 'cors'
 
 app = express()
+app.use cors()
 
 app.users = {}
 
