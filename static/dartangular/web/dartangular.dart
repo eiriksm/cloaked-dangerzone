@@ -6,7 +6,8 @@ import 'dart:mirrors';
 
 @Component(
   selector: 'booking-ctrl',
-  templateUrl: 'book-ctrl.html')
+  templateUrl: 'book-ctrl.html',
+  cssUrl: 'book-ctrl.css')
 class BookingComponent {
   List<Map> availableUsers = new List();
   Map bookingData = new Map();
@@ -16,7 +17,6 @@ class BookingComponent {
   String title = 'Cloaked danger-zone';
   
   BookingComponent(this._http) {
-    print("doing this init stuff.");
     // Turn on loading animation.
     loading = true;
     // Get all available users.
