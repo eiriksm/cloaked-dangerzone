@@ -41,7 +41,7 @@ describe 'App', ->
     .set('Authorization', 'Basic dGVzdG5hbWVAdGVzdC5jb206Ym9ndXM=')
     .end (err, a, b) ->
       a.statusCode.should.equal 200
-      a.body.status.length.should.equal 0
+      a.body.status.should.equal false
       upd = a.body.updated
       done(err)
 
@@ -51,7 +51,7 @@ describe 'App', ->
     .set('Authorization', 'Basic dGVzdG5hbWVAdGVzdC5jb206Ym9ndXM=')
     .end (err, a, b) ->
       a.statusCode.should.equal 200
-      a.body.status.length.should.equal 0
+      a.body.status.should.equal false
       a.body.updated.should.equal upd
       done(err)
 
