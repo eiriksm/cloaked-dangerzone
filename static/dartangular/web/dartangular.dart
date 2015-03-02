@@ -13,7 +13,7 @@ class BookingComponent {
   Map bookingData = new Map();
   final Http _http;
   bool loading = false;
-  String base = 'http://localhost:8080/';
+  String base = '/';
   String title = 'Cloaked danger-zone';
   
   BookingComponent(this._http) {

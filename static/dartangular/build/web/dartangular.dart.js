@@ -16434,7 +16434,7 @@ nJ:[function(a,b){this.n0=!0
 this.Jo.ox(C.xB.g(C.xB.g(this.zm+"api/unbook/",b)+"/",a)).ml(new X.mMk(this,b))},"$2","gaD",4,0,396,397,9],
 xd:function(a){this.n0=!0
 this.Jo.ox(this.zm+"api/user").ml(new X.R5t(this))},
-static:{KTI:function(a){var z=new X.AD([],P.L5(null,null,null,null,null),a,!1,"http://localhost:8080/","Cloaked danger-zone")
+static:{KTI:function(a){var z=new X.AD([],P.L5(null,null,null,null,null),a,!1,"/","Cloaked danger-zone")
 z.xd(a)
 return z}}},
 R5t:{
@@ -16721,43 +16721,43 @@ w175:{
 $1:[function(a){return a.gQR()},"$1",null,2,0,null,99,"call"]},
 w176:{
 "^":"TpZ:30;",
-$1:[function(a){return a.gWq()},"$1",null,2,0,null,99,"call"]},
+$1:[function(a){return a.gT9()},"$1",null,2,0,null,99,"call"]},
 w177:{
 "^":"TpZ:30;",
-$1:[function(a){return a.gWB()},"$1",null,2,0,null,99,"call"]},
+$1:[function(a){return J.Be(a)},"$1",null,2,0,null,99,"call"]},
 w178:{
 "^":"TpZ:30;",
-$1:[function(a){return a.gn0()},"$1",null,2,0,null,99,"call"]},
+$1:[function(a){return a.gWq()},"$1",null,2,0,null,99,"call"]},
 w179:{
 "^":"TpZ:30;",
-$1:[function(a){return a.gkR()},"$1",null,2,0,null,99,"call"]},
+$1:[function(a){return a.gWB()},"$1",null,2,0,null,99,"call"]},
 w180:{
 "^":"TpZ:30;",
-$1:[function(a){return J.Do(a)},"$1",null,2,0,null,99,"call"]},
+$1:[function(a){return a.gn0()},"$1",null,2,0,null,99,"call"]},
 w181:{
 "^":"TpZ:30;",
-$1:[function(a){return a.gtK()},"$1",null,2,0,null,99,"call"]},
+$1:[function(a){return a.gkR()},"$1",null,2,0,null,99,"call"]},
 w182:{
 "^":"TpZ:30;",
-$1:[function(a){return J.Ql(a)},"$1",null,2,0,null,99,"call"]},
+$1:[function(a){return J.Do(a)},"$1",null,2,0,null,99,"call"]},
 w183:{
 "^":"TpZ:30;",
-$1:[function(a){return a.gVg()},"$1",null,2,0,null,99,"call"]},
+$1:[function(a){return a.gtK()},"$1",null,2,0,null,99,"call"]},
 w184:{
 "^":"TpZ:30;",
-$1:[function(a){return a.gjr()},"$1",null,2,0,null,99,"call"]},
+$1:[function(a){return J.Ql(a)},"$1",null,2,0,null,99,"call"]},
 w185:{
 "^":"TpZ:30;",
-$1:[function(a){return J.SN(a)},"$1",null,2,0,null,99,"call"]},
+$1:[function(a){return a.gVg()},"$1",null,2,0,null,99,"call"]},
 w186:{
 "^":"TpZ:30;",
-$1:[function(a){return J.eS(a)},"$1",null,2,0,null,99,"call"]},
+$1:[function(a){return a.gjr()},"$1",null,2,0,null,99,"call"]},
 w187:{
 "^":"TpZ:30;",
-$1:[function(a){return a.gT9()},"$1",null,2,0,null,99,"call"]},
+$1:[function(a){return J.SN(a)},"$1",null,2,0,null,99,"call"]},
 w188:{
 "^":"TpZ:30;",
-$1:[function(a){return J.Be(a)},"$1",null,2,0,null,99,"call"]},
+$1:[function(a){return J.eS(a)},"$1",null,2,0,null,99,"call"]},
 w189:{
 "^":"TpZ:30;",
 $1:[function(a){return a.gBT()},"$1",null,2,0,null,99,"call"]},
@@ -17102,55 +17102,55 @@ $2:function(a,b){a.sQR(b)
 return b}},
 w79:{
 "^":"TpZ:32;",
-$2:function(a,b){a.sWq(b)
+$2:function(a,b){a.sT9(b)
 return b}},
 w80:{
 "^":"TpZ:32;",
-$2:function(a,b){a.sWB(b)
+$2:function(a,b){J.Wd(a,b)
 return b}},
 w81:{
 "^":"TpZ:32;",
-$2:function(a,b){a.sn0(b)
+$2:function(a,b){a.sWq(b)
 return b}},
 w82:{
 "^":"TpZ:32;",
-$2:function(a,b){a.skR(b)
+$2:function(a,b){a.sWB(b)
 return b}},
 w83:{
 "^":"TpZ:32;",
-$2:function(a,b){J.nC(a,b)
+$2:function(a,b){a.sn0(b)
 return b}},
 w84:{
 "^":"TpZ:32;",
-$2:function(a,b){a.stK(b)
+$2:function(a,b){a.skR(b)
 return b}},
 w85:{
 "^":"TpZ:32;",
-$2:function(a,b){J.l6(a,b)
+$2:function(a,b){J.nC(a,b)
 return b}},
 w86:{
 "^":"TpZ:32;",
-$2:function(a,b){a.sVg(b)
+$2:function(a,b){a.stK(b)
 return b}},
 w87:{
 "^":"TpZ:32;",
-$2:function(a,b){a.sjr(b)
+$2:function(a,b){J.l6(a,b)
 return b}},
 w88:{
 "^":"TpZ:32;",
-$2:function(a,b){J.DF(a,b)
+$2:function(a,b){a.sVg(b)
 return b}},
 w89:{
 "^":"TpZ:32;",
-$2:function(a,b){J.to(a,b)
+$2:function(a,b){a.sjr(b)
 return b}},
 w90:{
 "^":"TpZ:32;",
-$2:function(a,b){a.sT9(b)
+$2:function(a,b){J.DF(a,b)
 return b}},
 w91:{
 "^":"TpZ:32;",
-$2:function(a,b){J.Wd(a,b)
+$2:function(a,b){J.to(a,b)
 return b}}}],["","",,M,{
 "^":"",
 w191:{
@@ -22668,8 +22668,8 @@ I.$lazy($,"_dartProxyCtor","fK","iW",function(){return function DartObject(a){th
 I.$lazy($,"_instances","jp","j1",function(){return P.Fl(null,null)})
 I.$lazy($,"_defaultTag","rQ","vt",function(){return P.AB("Default")})
 I.$lazy($,"_currentTag","nF","dn",function(){return $.vt()})
-I.$lazy($,"getters","E4","FO",function(){return P.EF(["select",new K.w92(),"urls",new K.w93(),"value",new K.w94(),"bind",new K.w95(),"valueExpression",new K.w96(),"onAbort",new K.w97(),"onBeforeCopy",new K.w98(),"onBeforeCut",new K.w99(),"onBeforePaste",new K.w100(),"onBlur",new K.w101(),"onChange",new K.w102(),"onClick",new K.w103(),"onContextMenu",new K.w104(),"onCopy",new K.w105(),"onCut",new K.w106(),"onDoubleClick",new K.w107(),"onDrag",new K.w108(),"onDragEnd",new K.w109(),"onDragEnter",new K.w110(),"onDragLeave",new K.w111(),"onDragOver",new K.w112(),"onDragStart",new K.w113(),"onDrop",new K.w114(),"onError",new K.w115(),"onFocus",new K.w116(),"onFullscreenChange",new K.w117(),"onFullscreenError",new K.w118(),"onInput",new K.w119(),"onInvalid",new K.w120(),"onKeyDown",new K.w121(),"onKeyPress",new K.w122(),"onKeyUp",new K.w123(),"onLoad",new K.w124(),"onMouseDown",new K.w125(),"onMouseEnter",new K.w126(),"onMouseLeave",new K.w127(),"onMouseMove",new K.w128(),"onMouseOut",new K.w129(),"onMouseOver",new K.w130(),"onMouseUp",new K.w131(),"onMouseWheel",new K.w132(),"onPaste",new K.w133(),"onReset",new K.w134(),"onScroll",new K.w135(),"onSearch",new K.w136(),"onSelect",new K.w137(),"onSelectStart",new K.w138(),"onSubmit",new K.w139(),"onTouchCancel",new K.w140(),"onTouchEnd",new K.w141(),"onTouchEnter",new K.w142(),"onTouchLeave",new K.w143(),"onTouchMove",new K.w144(),"onTouchStart",new K.w145(),"onTransitionEnd",new K.w146(),"condition",new K.w147(),"url",new K.w148(),"name",new K.w149(),"model",new K.w150(),"idlAttrKind",new K.w151(),"count",new K.w152(),"expression",new K.w153(),"templateUrl",new K.w154(),"hide",new K.w155(),"show",new K.w156(),"checked",new K.w157(),"disabled",new K.w158(),"multiple",new K.w159(),"open",new K.w160(),"readonly",new K.w161(),"required",new K.w162(),"selected",new K.w163(),"href",new K.w164(),"src",new K.w165(),"srcset",new K.w166(),"styleExpression",new K.w167(),"max",new K.w168(),"min",new K.w169(),"pattern",new K.w170(),"minlength",new K.w171(),"maxlength",new K.w172(),"options",new K.w173(),"option",new K.w174(),"routeName",new K.w175(),"availableUsers",new K.w176(),"user",new K.w177(),"loading",new K.w178(),"bookingData",new K.w179(),"data",new K.w180(),"resources",new K.w181(),"start",new K.w182(),"timepoint",new K.w183(),"datetime",new K.w184(),"order",new K.w185(),"id",new K.w186(),"ctrl",new K.w187(),"title",new K.w188(),"loadBooking",new K.w189(),"unbook",new K.w190()],null,null)})
-I.$lazy($,"setters","F8","pG",function(){return P.EF(["select",new K.YJ(),"urls",new K.lP(),"value",new K.wJY(),"bind",new K.zOQ(),"valueExpression",new K.W6o(),"onAbort",new K.MdQ(),"onBeforeCopy",new K.YJG(),"onBeforeCut",new K.DOe(),"onBeforePaste",new K.lPa(),"onBlur",new K.Ufa(),"onChange",new K.Raa(),"onClick",new K.w0(),"onContextMenu",new K.w5(),"onCopy",new K.w6(),"onCut",new K.w7(),"onDoubleClick",new K.w10(),"onDrag",new K.w11(),"onDragEnd",new K.w12(),"onDragEnter",new K.w13(),"onDragLeave",new K.w14(),"onDragOver",new K.w15(),"onDragStart",new K.w16(),"onDrop",new K.w17(),"onError",new K.w18(),"onFocus",new K.w19(),"onFullscreenChange",new K.w20(),"onFullscreenError",new K.w21(),"onInput",new K.w22(),"onInvalid",new K.w23(),"onKeyDown",new K.w24(),"onKeyPress",new K.w25(),"onKeyUp",new K.w26(),"onLoad",new K.w27(),"onMouseDown",new K.w28(),"onMouseEnter",new K.w29(),"onMouseLeave",new K.w30(),"onMouseMove",new K.w31(),"onMouseOut",new K.w32(),"onMouseOver",new K.w33(),"onMouseUp",new K.w34(),"onMouseWheel",new K.w35(),"onPaste",new K.w36(),"onReset",new K.w37(),"onScroll",new K.w38(),"onSearch",new K.w39(),"onSelect",new K.w40(),"onSelectStart",new K.w41(),"onSubmit",new K.w42(),"onTouchCancel",new K.w43(),"onTouchEnd",new K.w44(),"onTouchEnter",new K.w45(),"onTouchLeave",new K.w46(),"onTouchMove",new K.w47(),"onTouchStart",new K.w48(),"onTransitionEnd",new K.w49(),"condition",new K.w50(),"url",new K.w51(),"name",new K.w52(),"model",new K.w53(),"idlAttrKind",new K.w54(),"count",new K.w55(),"expression",new K.w56(),"templateUrl",new K.w57(),"hide",new K.w58(),"show",new K.w59(),"checked",new K.w60(),"disabled",new K.w61(),"multiple",new K.w62(),"open",new K.w63(),"readonly",new K.w64(),"required",new K.w65(),"selected",new K.w66(),"href",new K.w67(),"src",new K.w68(),"srcset",new K.w69(),"styleExpression",new K.w70(),"max",new K.w71(),"min",new K.w72(),"pattern",new K.w73(),"minlength",new K.w74(),"maxlength",new K.w75(),"options",new K.w76(),"option",new K.w77(),"routeName",new K.w78(),"availableUsers",new K.w79(),"user",new K.w80(),"loading",new K.w81(),"bookingData",new K.w82(),"data",new K.w83(),"resources",new K.w84(),"start",new K.w85(),"timepoint",new K.w86(),"datetime",new K.w87(),"order",new K.w88(),"id",new K.w89(),"ctrl",new K.w90(),"title",new K.w91()],null,null)})
+I.$lazy($,"getters","E4","FO",function(){return P.EF(["select",new K.w92(),"urls",new K.w93(),"value",new K.w94(),"bind",new K.w95(),"valueExpression",new K.w96(),"onAbort",new K.w97(),"onBeforeCopy",new K.w98(),"onBeforeCut",new K.w99(),"onBeforePaste",new K.w100(),"onBlur",new K.w101(),"onChange",new K.w102(),"onClick",new K.w103(),"onContextMenu",new K.w104(),"onCopy",new K.w105(),"onCut",new K.w106(),"onDoubleClick",new K.w107(),"onDrag",new K.w108(),"onDragEnd",new K.w109(),"onDragEnter",new K.w110(),"onDragLeave",new K.w111(),"onDragOver",new K.w112(),"onDragStart",new K.w113(),"onDrop",new K.w114(),"onError",new K.w115(),"onFocus",new K.w116(),"onFullscreenChange",new K.w117(),"onFullscreenError",new K.w118(),"onInput",new K.w119(),"onInvalid",new K.w120(),"onKeyDown",new K.w121(),"onKeyPress",new K.w122(),"onKeyUp",new K.w123(),"onLoad",new K.w124(),"onMouseDown",new K.w125(),"onMouseEnter",new K.w126(),"onMouseLeave",new K.w127(),"onMouseMove",new K.w128(),"onMouseOut",new K.w129(),"onMouseOver",new K.w130(),"onMouseUp",new K.w131(),"onMouseWheel",new K.w132(),"onPaste",new K.w133(),"onReset",new K.w134(),"onScroll",new K.w135(),"onSearch",new K.w136(),"onSelect",new K.w137(),"onSelectStart",new K.w138(),"onSubmit",new K.w139(),"onTouchCancel",new K.w140(),"onTouchEnd",new K.w141(),"onTouchEnter",new K.w142(),"onTouchLeave",new K.w143(),"onTouchMove",new K.w144(),"onTouchStart",new K.w145(),"onTransitionEnd",new K.w146(),"condition",new K.w147(),"url",new K.w148(),"name",new K.w149(),"model",new K.w150(),"idlAttrKind",new K.w151(),"count",new K.w152(),"expression",new K.w153(),"templateUrl",new K.w154(),"hide",new K.w155(),"show",new K.w156(),"checked",new K.w157(),"disabled",new K.w158(),"multiple",new K.w159(),"open",new K.w160(),"readonly",new K.w161(),"required",new K.w162(),"selected",new K.w163(),"href",new K.w164(),"src",new K.w165(),"srcset",new K.w166(),"styleExpression",new K.w167(),"max",new K.w168(),"min",new K.w169(),"pattern",new K.w170(),"minlength",new K.w171(),"maxlength",new K.w172(),"options",new K.w173(),"option",new K.w174(),"routeName",new K.w175(),"ctrl",new K.w176(),"title",new K.w177(),"availableUsers",new K.w178(),"user",new K.w179(),"loading",new K.w180(),"bookingData",new K.w181(),"data",new K.w182(),"resources",new K.w183(),"start",new K.w184(),"timepoint",new K.w185(),"datetime",new K.w186(),"order",new K.w187(),"id",new K.w188(),"loadBooking",new K.w189(),"unbook",new K.w190()],null,null)})
+I.$lazy($,"setters","F8","pG",function(){return P.EF(["select",new K.YJ(),"urls",new K.lP(),"value",new K.wJY(),"bind",new K.zOQ(),"valueExpression",new K.W6o(),"onAbort",new K.MdQ(),"onBeforeCopy",new K.YJG(),"onBeforeCut",new K.DOe(),"onBeforePaste",new K.lPa(),"onBlur",new K.Ufa(),"onChange",new K.Raa(),"onClick",new K.w0(),"onContextMenu",new K.w5(),"onCopy",new K.w6(),"onCut",new K.w7(),"onDoubleClick",new K.w10(),"onDrag",new K.w11(),"onDragEnd",new K.w12(),"onDragEnter",new K.w13(),"onDragLeave",new K.w14(),"onDragOver",new K.w15(),"onDragStart",new K.w16(),"onDrop",new K.w17(),"onError",new K.w18(),"onFocus",new K.w19(),"onFullscreenChange",new K.w20(),"onFullscreenError",new K.w21(),"onInput",new K.w22(),"onInvalid",new K.w23(),"onKeyDown",new K.w24(),"onKeyPress",new K.w25(),"onKeyUp",new K.w26(),"onLoad",new K.w27(),"onMouseDown",new K.w28(),"onMouseEnter",new K.w29(),"onMouseLeave",new K.w30(),"onMouseMove",new K.w31(),"onMouseOut",new K.w32(),"onMouseOver",new K.w33(),"onMouseUp",new K.w34(),"onMouseWheel",new K.w35(),"onPaste",new K.w36(),"onReset",new K.w37(),"onScroll",new K.w38(),"onSearch",new K.w39(),"onSelect",new K.w40(),"onSelectStart",new K.w41(),"onSubmit",new K.w42(),"onTouchCancel",new K.w43(),"onTouchEnd",new K.w44(),"onTouchEnter",new K.w45(),"onTouchLeave",new K.w46(),"onTouchMove",new K.w47(),"onTouchStart",new K.w48(),"onTransitionEnd",new K.w49(),"condition",new K.w50(),"url",new K.w51(),"name",new K.w52(),"model",new K.w53(),"idlAttrKind",new K.w54(),"count",new K.w55(),"expression",new K.w56(),"templateUrl",new K.w57(),"hide",new K.w58(),"show",new K.w59(),"checked",new K.w60(),"disabled",new K.w61(),"multiple",new K.w62(),"open",new K.w63(),"readonly",new K.w64(),"required",new K.w65(),"selected",new K.w66(),"href",new K.w67(),"src",new K.w68(),"srcset",new K.w69(),"styleExpression",new K.w70(),"max",new K.w71(),"min",new K.w72(),"pattern",new K.w73(),"minlength",new K.w74(),"maxlength",new K.w75(),"options",new K.w76(),"option",new K.w77(),"routeName",new K.w78(),"ctrl",new K.w79(),"title",new K.w80(),"availableUsers",new K.w81(),"user",new K.w82(),"loading",new K.w83(),"bookingData",new K.w84(),"data",new K.w85(),"resources",new K.w86(),"start",new K.w87(),"timepoint",new K.w88(),"datetime",new K.w89(),"order",new K.w90(),"id",new K.w91()],null,null)})
 I.$lazy($,"symbols","W4","oy",function(){return P.Fl(null,null)})
 I.$lazy($,"typeAnnotations","Dv","El",function(){return P.EF([C.ke,C.Su,C.ZY,C.n0,C.Vy,C.n0,C.Ew,C.n0,C.dI,C.n0,C.no,C.n0,C.YQ,C.n0,C.Ce,C.n0,C.h8,C.n0,C.wy,C.n0,C.ul,C.n0,C.HmD,C.n0,C.xI,C.n0,C.CQ,C.n0,C.W5,C.n0,C.JH,C.n0,C.Wh,C.n0,C.aH,C.n0,C.AJ,C.n0,C.iO,C.n0,C.iM,C.tB,C.MF,C.SS,C.Nc,C.n0,C.Mf,C.n0,C.x3,C.n0,C.LC,C.n0,C.nj,C.n0,C.hL,C.c4,C.bQ,C.n0,C.NXr,C.n0,C.NY,C.n0,C.VB,C.n0,C.tk,C.ow,C.bs,C.Oi,C.Jl,C.I3,C.CC,C.Yw,C.Rx,C.pw,C.bc,C.KF,C.Sm,C.Kt,C.HC,C.m6,C.bv,C.wm,C.CK,C.oF,C.Ct,C.Xx,C.ZS,C.va,C.PY,C.NZ,C.ER,C.I0r,C.eX,C.Kk,C.IH,C.nl,C.JL,C.Ypw,C.p3,C.rL,C.A5,C.oj,C.Vu,C.G6,C.t4,C.xhY,C.UY,C.RsL,C.dT,C.YBQ,C.qo,C.nf,C.y5,C.tqu,C.Gi,C.hR,C.fu,C.tY,C.Og,C.Nb,C.Zx,C.p7,C.pk,C.iG,C.yr,C.yL,C.et,C.mn,C.vq,C.xF,C.ap,C.Of,C.jY,C.jG,C.Vz,C.OZ,C.b6,C.S1,C.xf,C.uD,C.e7,C.RD,C.Zk,C.qK,C.mh,C.DN,C.xT,C.wg,C.H9,C.LQ,C.uM,C.rpO,C.Fq,C.Ypw,C.DP,C.uF,C.PW,C.Qb,C.Ay,C.po,C.Wn,C.vQ,C.LB,C.jt,C.kR,C.j19,C.Wa,C.n0,C.AW,C.n0,C.ek,C.n0,C.ux,C.n0,C.FF,C.n0,C.Pn,C.n0,C.Uw,C.n0,C.Ob,C.n0,C.VD,C.n0,C.Tp,C.n0,C.kNE,C.n0,C.ne,C.n0,C.PX,C.n0,C.Ls,C.n0,C.MX,C.n0,C.Lg,C.n0,C.hq,C.ruo,C.Dp,C.uW,C.MT,C.zm0,C.pB,C.eH,C.SR,C.MI,C.eb,C.Mt,C.XT,C.Gr,C.Dh,C.cE,C.Fo,C.pf,C.CI,C.Rm,C.z3,C.p0,C.RV,C.n0,C.tp,C.n0,C.Rd,C.n0,C.p5,C.n0,C.Hl,C.n0,C.BxV,C.PK,C.xl,C.mZ,C.U2,C.n0,C.Ax,C.n0,C.fk,C.vIf,C.cF,C.Ui,C.Tm,C.n0],null,null)})
 I.$lazy($,"_KEY_Http","Kl","qk",function(){return Z.fJ(C.AJ,null)})
