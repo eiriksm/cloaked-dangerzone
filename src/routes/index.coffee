@@ -1,5 +1,4 @@
 app = require '../app'
-users = {}
 _ = require 'underscore'
 
 settings = app.settings
@@ -40,7 +39,7 @@ module.exports =
     user = req.params.user
     id = req.params.id
     octo = require 'tripping-octo-nemesis'
-    octo.init users[user], false, (err, _) ->
+    octo.init app.users[user], false, (err, initRes) ->
       octo.unbook id, (e, r) ->
         # This means we need to invalidate the cache.
         delete app.cache[user]

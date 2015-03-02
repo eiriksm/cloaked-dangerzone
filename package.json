@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "make test",
-    "start": "make compile && node index"
+    "start": "node index"
   },
   "repository": {
     "type": "git",
@@ -18,20 +18,20 @@
   },
   "homepage": "https://github.com/eiriksm/cloaked-dangerzone",
   "devDependencies": {
-    "coffee-script": "~1.9.0",
+    "coffee-script": "~1.9.1",
     "coveralls": "~2.11.2",
-    "istanbul": "~0.3.5",
+    "istanbul": "~0.3.6",
     "mocha": "~2.1.0",
-    "should": "~4.6.4",
+    "should": "~5.0.1",
     "supertest": "~0.15.0"
   },
   "dependencies": {
-    "compression": "~1.4.0",
+    "compression": "~1.4.1",
     "cors": "^2.5.3",
-    "express": "~4.11.2",
+    "express": "~4.12.1",
     "http-auth": "^2.2.5",
-    "tripping-octo-nemesis": "~0.1.0",
-    "underscore": "^1.7.0",
+    "tripping-octo-nemesis": "~1.0.1",
+    "underscore": "^1.8.2",
     "yaml-config": "~0.3.0"
   }
 }

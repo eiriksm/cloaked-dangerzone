@@ -13,7 +13,7 @@ class BookingComponent {
   Map bookingData = new Map();
   final Http _http;
   bool loading = false;
-  String base = '/';
+  String base = 'http://localhost:8080/';
   String title = 'Cloaked danger-zone';
   
   BookingComponent(this._http) {
@@ -34,9 +34,9 @@ class BookingComponent {
     _http.get(base + 'api/userstatus/' + user)
     .then((HttpResponse response) {
       loading = false;
+      bookingData[user] = new List();
       response.data.forEach((k, v) {
-        if (k == 'status') {
-          bookingData[user] = new List();
+        if (k == 'status' && v != false) {
           v.forEach((f) {
             bookingData[user].add(f);
           });

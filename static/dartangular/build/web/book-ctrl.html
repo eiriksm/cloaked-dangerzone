@@ -22,10 +22,9 @@
   </div>
   <ul>
     <li ng-repeat="data in bookingData[user]">
-      <span>{{data[0]}}</span>
-      <span>{{data[1]}},</span>
-      <span>{{data[2]}}</span>
-      <a href="javascript:;" ng-click="unbook(data[3], user)"><i class="fa fa-magic"></i> unbook</a>
+      <span>{{data.resources[0].name}}, </span>
+      <span>{{data.start.timepoint.datetime}}</span>
+      <a href="javascript:;" ng-click="unbook(data.order.id + '', user)"><i class="fa fa-magic"></i> unbook</a>
     </li>
   </ul>
 </div>
