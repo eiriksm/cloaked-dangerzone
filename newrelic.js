@@ -20,5 +20,7 @@ exports.config = {
      * production applications.
      */
     level : 'info'
-  }
+  },
+  port: 80,
+  ssl: false
 };
